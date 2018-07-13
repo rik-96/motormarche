@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Motormarche</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class="outer-container">
+  {% extends "header.html" %}
+  {% block body %}
+  <div id="shop" class="container-fluid text-center bg-grey shop-link">
+  <a href="#" class="btn btn-link btn-lg btn-link-user" >
+    <span class="glyphicon glyphicon-shopping-cart"></span> CLICK HERE TO SHOP
+  </a>
+  </div>
+  <div class="row text-center" style="padding-left: 7%;padding-right: 7%">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='images/men.jpg') }}"  style="height: 400px; width:100%">
+        <p style="font-size:1.5em"><strong>Men</strong></p>
+        <a class="shopping-link" href="#">More>>></a>
+      </div>
+    </div>
+    <div >
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='images/women.jpeg') }}" style="height: 400px; width:100%">
+        <p style="font-size:1.5em"><strong>Women</strong></p>
+        <a class="shopping-link" href="#">More>>></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='images/child.jpg') }}"  style="height: 400px; width:100%">
+        <p style="font-size:1.5em"><strong>Children</strong></p>
+        <a class="shopping-link" href="#">More>>></a>
+      </div>
+    </div>
+    </div>
+</div>
+  <div id="services" class="container-fluid text-center" style="background: #eee;">
+  <h2>SERVICES</h2>
+  <h4 ><small>Get your work done from the best</small></h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod1</h4>
+      <p>Details about this service...</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod2</h4>
+      <p>Details about this service...</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod3</h4>
+      <p>Details about this service...</p>
+    </div>
+    </div>
+    <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod4</h4>
+      <p>Details about this service...</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod5</h4>
+      <p>Details about this service...</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate glyph-size-md"></span>
+      <h4>Mod6</h4>
+      <p>Details about this service...</p>
+    </div>
+  </div>
+</div>
+<div id="about" class="container-fluid" >
+    <div class="row">
+      <div class="col-sm-8 text-center">
+        <h2>About Motormarche</h2>
+        <p>Details about the company go here..</p>
+      </div>
+      <div class="col-sm-4">
+        <img class="center" src="{{ url_for('static', filename='images/orig.jpeg') }}" style="width:100%">
+      </div>
+    </div>
+    </div>
+    <div id="contact" class="text-center footer">
+      <h3><strong>Motormarche </strong><span style="font-size:10px;vertical-align: top">&copy &reg</span></h3>
+      <p><strong>Phone</strong>: +91950403998, +91950403999</p>
+      <p><strong>Mail</strong>: motormarche@gmail.com</p>
+      <p><small>Follow us at: 
+      <a href="#" class="fa fa-facebook-official fa-icon" style="color:white"></a>
+      <a href="#" class="fa fa-twitter fa-icon" style="color:white"></a>
+      <a href="#" class="fa fa-instagram fa-icon" style="color:white"></a>
+      </small></p>
+    </div>
+    {% endblock %}
+  </body>
+  </html>

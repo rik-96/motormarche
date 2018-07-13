@@ -1,0 +1,85 @@
+body,html {
+  margin:0;
+  padding:0;
+}
+.jumbotron{
+  background-color: #222;
+  color: #eee;
+  padding: 100px  20px;
+  margin: 0;
+}
+.btn{
+  background-color: #666;
+}
+.container-fluid{
+  padding: 50px 0px;
+  margin: 0px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.fa-icon:hover{
+  text-decoration: none;
+}
+.shop-link{
+  
+}
+.footer{
+  background-color: #222;
+  color: #eee;
+  padding: 20px;
+  font-size: 1.3em;
+  margin-bottom: 0px;
+  margin-top: 100px;
+  height: 30%;
+}
+img.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.glyph-size-md{
+  font-size: 150px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px 10px;
+}
+.btn-link-user{
+  color: white;
+  border: 3px solid transparent;
+}
+.btn-link-user:hover{
+  color: black;
+  background: #eee;
+  border: 3px solid black;
+}
+.shopping-link{
+  color: #222;
+}
+.shopping-link:hover{
+  color: #222;
+}

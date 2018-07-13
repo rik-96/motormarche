@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Motormarche</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class="outer-container">
+{% extends "header.html" %}
+
+
+{% block body %}
+
+	<br>
+	<h4>Please Login:</h4>
+	<br>
+	<form action="" class="form-inline" method="post">
+		<input type="text" class="form-control" placeholder="Username" name="username" value="{{request.form.username}}">
+		<input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
+		<input class="btn btn-default" type="submit" value="Login">
+	</form>
+
+	<p> {{error}} </p>
+</div>
+</body>
+
+{% endblock %}

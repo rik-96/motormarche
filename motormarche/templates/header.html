@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="outer-container">
+   <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Motormarche</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      	{% if session.logged_in %}
+      	<li><a href="/">HOME</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+      	<li><a href="/logout">LOG OUT</a></li>
+      	{% else %}
+        <li><a href="/">HOME</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="/login">LOGIN</a></li>
+        <li><a href="/register">SIGN UP</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav> 
+  <div id="#home" class="jumbotron text-center">
+    <h1>Motormarche</h1>
+    <p>The tagline...</p>
+    <form class="form-inline">
+      <div class="input-group">
+        <input type="email" class="form-control" size=50 placeholder="Email Address" required>
+        <div class="input-group-btn">
+          <button type="button" class="btn">Subscribe to our Newsletter</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  <div>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="alert alert-warning alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">
+						&times;
+					</span>
+				</button>
+					{{message}}
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	{% block body %} {% endblock %}
+	</div>
+  </body>
+</html>
